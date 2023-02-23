@@ -1,10 +1,13 @@
+/*region ----- TOP LEVEL ELEMENTS -----*/
+
 body {
     color: #2b283a;
     font-family: 'Roboto', sans-serif;
     margin: 0;
 }
+/*endregion*/
 
-/* ----- TYPOGRAPHY ----- */
+/* region ----- TYPOGRAPHY ----- */
 
 h1, 
 h3 {
@@ -39,8 +42,9 @@ p {
 .section-two h2 {
     color: inherit;
 }
+/*endregion*/
 
-/* ----- LINKS ----- */
+/* region ----- LINKS ----- */
 
 a {
     color: #ef5839;
@@ -58,7 +62,7 @@ a:active {
     text-decoration: none;
     display: inline-block;
     padding: 10px 20px;
-    border-radius: 4.6px;
+    border-radius: 5px;
 }
 
 .btn-dark {
@@ -81,8 +85,9 @@ a:active {
     color: #2b238a;
     background-color: #f3e885;
 }
+/*endregion*/
 
-/* ----- LAYOUT ----- */
+/* region ----- LAYOUT ----- */
 
 header, 
 section, 
@@ -100,13 +105,17 @@ header,
 }
 
 .container {
-    width: 640px;
+    width: 90%;
+    max-width: 800px;
+    /*border: 2px solid tomato;*/
     margin: 0 auto;
 }
 
 .main-image {
+    display: block;
     width: 100%;
-    margin-bottom: 32px;
+    max-width: 640px;
+    margin: 0 auto 32px;
 }
 
 .section-two-image-container {
@@ -115,11 +124,12 @@ header,
 }
 
 .feature-image {
-    width: 310px;
-    border-radius: 4.6px;
+    width: 48%;
+    border-radius: 5px;
 }
 
 footer {
     text-align: center;
     color: #5f29a3;
 }
+/*endregion*/
