@@ -1,5 +1,4 @@
-/*region ----- TOP LEVEL ELEMENTS -----*/
-
+/*region -----ROOT ELEMENTS-----*/
 body {
     color: #2b283a;
     font-family: 'Roboto', sans-serif;
@@ -9,33 +8,35 @@ body {
 
 /* region ----- TYPOGRAPHY ----- */
 
-h1, 
+h1,
 h3 {
     margin: 0;
 }
 
 h1 {
     color: whitesmoke;
-    font-size: 36px;
+    font-size: 2.25rem;
 }
 
 h2 {
     color: #451c7a;
-    font-size: 28px;
+    font-size: 1.75rem;
     margin-top: 0;
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 p {
-    line-height: 23px;
+    /*line-height: 23px;*/
+    line-height: 1.5;
+
 }
 
 .subheading {
     display: block;
-    font-size: 20px;
+    font-size: 1.25rem; /*20px/16=*/
     color: #d0aaff;
 }
 
@@ -48,21 +49,23 @@ p {
 
 a {
     color: #ef5839;
-    text-decoration: underline dotted; 
+    text-decoration: underline dotted;
 }
 
-a:hover, 
+a:hover,
 a:active {
     color: #d4b44c;
 }
 
 .btn {
-    font-size: 18px;
+    font-size: 1.125em;
     font-weight: 500;
     text-decoration: none;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 0.5em 1em;
     border-radius: 5px;
+    margin-right: 0.5em;
+    margin-bottom: 1em;
 }
 
 .btn-dark {
@@ -71,16 +74,16 @@ a:active {
 }
 
 .btn-mid {
-    color: #5f29a3; 
-    background: #f0e0ff; 
+    color: #5f29a3;
+    background: #f0e0ff;
 }
 
 .btn-light {
-    color: #5f29a3; 
+    color: #5f29a3;
     background: whitesmoke;
 }
 
-.btn:hover, 
+.btn:hover,
 .btn:active {
     color: #2b238a;
     background-color: #f3e885;
@@ -89,13 +92,13 @@ a:active {
 
 /* region ----- LAYOUT ----- */
 
-header, 
-section, 
+header,
+section,
 footer {
-    padding: 46px 0;
+    padding: 2.875em 0; /* 46/16=  */
 }
 
-header, 
+header,
 .section-two {
     background-color: #5f29a3;
 }
@@ -107,15 +110,14 @@ header,
 .container {
     width: 90%;
     max-width: 800px;
-    /*border: 2px solid tomato;*/
     margin: 0 auto;
 }
 
 .main-image {
-    display: block;
     width: 100%;
+    display: block;
     max-width: 640px;
-    margin: 0 auto 32px;
+    margin: 0 auto 2em; /*32/16= 2em*/
 }
 
 .section-two-image-container {
@@ -124,8 +126,8 @@ header,
 }
 
 .feature-image {
-    width: 48%;
-    border-radius: 5px;
+    width: 48.8%;
+    border-radius: 4.6px;
 }
 
 footer {
