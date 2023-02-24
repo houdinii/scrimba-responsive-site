@@ -44,5 +44,25 @@ h1 {
 /* ----- MEDIA QUERIES ----- */
 
 
+@media(max-width: 799px){  /* if <= 499px, apply the following, else use above */
+    body{
+        color: #faf9f6;
+        background-color: #202945;
+    }
+    .punchline {
+        display: block;
+    }
+}
 
+@media(min-width: 800px) and (max-width: 899px){
+    body{
+        color: #faf9f6;
+        background-color: #355070;
+    }
+}
+@media(min-width:900px){
 
+    h1{
+        font-size: 3.5rem;
+    }
+}
