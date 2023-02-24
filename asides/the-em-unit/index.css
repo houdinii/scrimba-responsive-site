@@ -11,21 +11,23 @@ body {
 }
 
 .container {
-    width: 680px;
-    padding: 20px;
+    /*width: 680px;*/
+    width: 100%;
+    max-width: 680px;
+    padding: 1.25em;
     border-radius: 10px;
     margin: 0 auto;
 }
 
 header {
-    padding-top: 30px;
-    margin-bottom: 30px;
+    padding-top: 1.875em;
+    margin-bottom: 1.875em;
 }
 
 h1 {
-    font-size: 52px;
+    font-size: 3.25em;
     font-family: 'Fugaz One', cursive;
-    margin: 0 0 8px;
+    margin: 0 0 .22em;
 }
 
 h2 {
@@ -34,15 +36,15 @@ h2 {
 }
 
 h3 {
-    font-size: 24px;
+    font-size: 1.5em;
     width: 80%;
     border-bottom: dotted 1px;
-    padding-bottom: 12px;
-    margin: 0 auto 16px;
+    padding-bottom: 0.5em;
+    margin: 0 auto .75em;
 }
 
 .total-wk {
-    font-size: 18px;
+    font-size: 1.125em;
     letter-spacing: -1px;
 }
 
@@ -54,14 +56,14 @@ h3 {
 
 main {
     display: flex;
-    gap: 12px;
+    gap: .75em;
 }
 
 .day {
     color: #355070;
     text-align: center;
     width: 20%;
-    padding: 15px;
+    padding: 1em;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 1px 4px #00b4d8;
