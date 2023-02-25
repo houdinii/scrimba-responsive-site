@@ -1,0 +1,13 @@
+.image-container {
+    max-width: 800px;
+    line-height: 0;
+    margin: 0 auto;
+}
+
+.pet-item {
+    width: 200px;
+}
+
+img {
+    width: 100%;
+}
