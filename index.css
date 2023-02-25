@@ -1,14 +1,10 @@
-/*region -----ROOT ELEMENTS-----*/
-
 body {
     color: #2b283a;
     font-family: 'Roboto', sans-serif;
     margin: 0;
 }
 
-/*endregion*/
-
-/* region ----- TYPOGRAPHY ----- */
+/* ----- TYPOGRAPHY ----- */
 
 h1,
 h3 {
@@ -44,9 +40,7 @@ p {
     color: inherit;
 }
 
-/*endregion*/
-
-/* region ----- LINKS ----- */
+/* ----- LINKS ----- */
 
 a {
     color: #ef5839;
@@ -59,14 +53,14 @@ a:active {
 }
 
 .btn {
-    font-size: 1.125em;
+    font-size: 1.125rem;
+    text-align: center;
     font-weight: 500;
     text-decoration: none;
     display: block;
-    text-align: center;
     padding: 0.5em 1em;
-    border-radius: 5px;
     margin-bottom: 1em;
+    border-radius: 4.6px;
 }
 
 .btn-dark {
@@ -90,9 +84,7 @@ a:active {
     background-color: #f3e885;
 }
 
-/*endregion*/
-
-/* region ----- LAYOUT ----- */
+/* ----- LAYOUT ----- */
 
 header,
 section,
@@ -119,13 +111,28 @@ header,
     width: 100%;
     display: block;
     max-width: 640px;
-    margin: 0 auto 2em; /*32/16= 2em*/
+    margin: 0 auto 2em;
+}
+
+/*
+  Challenge: Wrap the feature-item divs with flexbox
+    1. Each .feature-item should grow from an initial main size of 220px
+    2. Allow the items inside .section-two-image-container to
+       wrap onto multiple lines
+    3. Apply a gap between each .feature-item
+*/
+
+.section-two-image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
 }
 
 .feature-image {
     width: 100%;
-    margin-bottom: 1em;
     border-radius: 4.6px;
+    flex-basis: 220px;
+    flex-grow: 1;
 }
 
 footer {
@@ -133,16 +140,14 @@ footer {
     color: #5f29a3;
 }
 
-/*endregion*/
-
-/* region ----- NAVIGATION ----- */
+/* ----- NAVIGATION ----- */
 
 nav a {
-    display: block;
-    font-size: 1.125rem;
-    padding: .85em 0;
     color: #fff;
     text-decoration: none;
+    font-size: 1.125rem;
+    padding: 0.85em 0;
+    display: block;
 }
 
 ul {
@@ -151,92 +156,64 @@ ul {
     list-style-type: none;
 }
 
-/*endregion*/
+/* ----- MEDIA QUERIES ----- */
 
-/* region ----- MEDIA QUERIES ----- */
-
-@media(min-width: 480px){
-    .section-two-image-container{
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .feature-image {
-        width: 48.8%;
-    }
-}
-
-@media(max-width: 767px){
-    nav {
-        margin-top: 1.5rem;
-    }
-
-    nav a{
+@media (max-width: 767px) {
+    header {
         text-align: center;
+    }
+
+    nav {
+        margin-top: 1.5em;
     }
 
     li:not(:last-child) {
         border-bottom: 1px dotted #a190b6;
     }
-
-    header{
-        text-align: center;
-    }
 }
 
-/*
-  Challenge: Navigation styles for wider screens
-    1. Use flexbox to display the navigation horizontally
-       on one row when the screen is 768px or wider
-    2. Align the nav with the right edge of its container
-    3. Apply space between each link with a margin
-    4. On wider screens, all of the content inside the header
-       should be vertically centered
-*/
-
-@media(min-width: 768px){
+@media (min-width: 768px) {
     header,
     section,
     footer {
         padding: 2.875em 0;
     }
 
-    .btn{
+    header .container,
+    nav ul {
+        display: flex;
+    }
+
+    header .container {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav li {
+        margin-left: 1.25em;
+    }
+
+    .btn {
         display: inline-block;
         margin-right: 0.5em;
     }
 
-    h1{
+    h1 {
         font-size: 2.25rem;
     }
 
-    h2{
+    h2 {
         font-size: 1.75rem;
     }
 
-    .subheading{
+    .subheading {
         font-size: 1.25rem;
     }
 
-    p{
+    p {
         font-size: 1.125rem;
     }
-
-    nav{
-        margin-left: auto;
+    .section-two-image-container{
+        flex-wrap: nowrap;
     }
-
-    nav li{
-        display: inline-block;
-        margin-right: 1.25em;
-    }
-
-    header .container{
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-    }
-
 }
-
-/*endregion*/
